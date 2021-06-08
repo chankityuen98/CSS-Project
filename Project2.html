@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        #navigations{
+
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #navigations > div{
+            display: grid;
+            grid-template-columns: 700px auto auto auto;
+            margin: 0 300px 0 300px;
+            /* border: 1px solid black ; */
+            
+        }
+        #navigations > div > .nav-items{
+            /* border: 2px solid red; */
+            text-align: center;
+            
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #navigations > div > div:nth-child(1){
+            text-align: left;
+        }
+        #navigations > div > .nav-items1, .nav-items2, .nav-items3{
+            margin-top: 20px;
+            padding: 5px;
+        }
+        #navigations > div > .nav-items1 > a, .nav-items2 > a, .nav-items3 > a{
+            margin-top: 20px;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+
+
+
+        #cover-page{
+            width: 100%;
+            height: 740px;
+            background-image: url(https://rocketman.learnwagtail.com/media/images/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-1600x800.jpg);
+            background-size: cover;
+            display: grid;
+            grid-template-rows: auto auto auto;
+        }
+        #box{
+            width: 100%;
+            height: 740px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .cover-content{
+            margin: 300px 300px 300px 300px;
+        }
+        .cover-content > h1, p{
+            color: white;
+        }
+        .cover-content > h1{
+            font-size: 60px;
+            max-width: 500px;
+        }
+        .cover-content > p{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .cover-content > a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bolder;
+            padding: 8px 32px;
+            color: black;
+            background-color: white;
+        }
+        .cover-content > a:hover{
+            background-color: rgb(209, 209, 209);
+        }
+
+
+        #content > h1#title{
+            font-weight: normal;
+            text-align: center;
+            margin: 100px 0 100px 0;
+        }
+
+        #grid-content{
+            display: grid;
+            grid-template-columns: 565px 565px;
+            grid-column-gap: 30px;
+            height: 600px;
+            position: relative;
+            margin: 0 351px 0 351px;
+            
+        }
+        #grid-content > .content{
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        #grid-content > .content > a > img{
+            width: 563px;
+        }
+        #grid-content > .content > .content-box > a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            text-align: center;
+        }
+        #grid-content > .content > .content-box > a:nth-child(1){
+            font-size: 23px;
+            font-weight: 900;
+        }
+        #grid-content > .content > .content-box > a:nth-child(2){
+            font-size: 21px;
+            margin: 20px 0 0 0;
+        }
+        #grid-content > .content > .content-box > a:nth-child(3){
+            color: #814EBF;
+            font-size: 16px;
+            font-weight: bolder;
+            margin: 20px 0 0 0;
+        }
+
+        
+        #grid-content-two{
+            margin: 100px 300px 0 300px;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-row-gap: 150px;
+        }
+        #grid-content-two > .pic-nav{
+            position: relative;
+            
+        }
+        #grid-content-two > .pic-nav > img{
+            width: 757.25px;
+            height: 531.81px;
+        }
+        #grid-content-two > .pic-nav > .content-two{
+            background-image: url(https://rocketman.learnwagtail.com/static/images/grey-pattern.b4f896f3f272.png);
+            display: inline-block;
+            width: 490px;
+            height: 292px;
+            padding: 50px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        #grid-content-two > div:nth-child(1)> div{
+            position: absolute;
+            right: 250px;
+            top: 300px;
+        }
+        #grid-content-two > div:nth-child(3)> div{
+            position: absolute;
+            right: 250px;
+            top: 300px;
+        }
+        #grid-content-two > div:nth-child(2) > div{
+            position: absolute;
+            left: 250px;
+            top: 300px;
+        }
+        #grid-content-two > div:nth-child(2) > img{
+            margin-left: 625.75px;
+        }
+
+        #grid-content-two > .pic-nav > .content-two > h1{
+            font-size: 34px;
+        }
+        #grid-content-two > .pic-nav > .content-two > p{
+            font-size: 21px;
+        }
+        #grid-content-two > .pic-nav > .content-two > a{
+            font-size: 18px;
+            text-decoration: none;
+            padding: 8px 48px;
+            color: black;
+            background-color: white;
+        }
+        #grid-content-two > .pic-nav > .content-two > a:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        
+
+        #final-content{
+            margin: 100px 300px 0 300px;
+        }
+        #final-content > p{
+            color: black;
+            font-size: 30px;
+            text-align: center;
+        }
+        #link-center{
+            text-align: center;
+        }
+        #link-center > a{
+            color: white;
+            background-color: #814EBF;
+            font-size: 18px;
+            padding: 8px 48px;
+            display: inline;
+            text-decoration: none;
+        }
+        #final-word{
+            margin: 100px 300px 0 300px;
+            text-align: center;
+        }
+        #final-word > p:nth-child(1){
+            margin: 0 300px 0 300px;
+            color: black;
+            font-style: italic;
+            font-size: 30px;
+            max-width: 765px;
+            
+        }
+        #final-word > p:nth-child(2){
+            color: black;
+            font-size: 18px;
+        }
+
+        #contact-section{
+            background-color: #814EBF;
+            padding-bottom: 10px;
+        }
+        #contact-section > #contact-grid{            
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: 20px 300px 20px 300px;
+            
+        }
+        /* .border{
+            border: 1px solid black;
+        } */
+        .contact1{
+            color: white;
+            font-size: 40px;
+            margin: 50px 0 0 0;
+        }
+        .contact2{
+            color: black;
+            width: 190px;
+            height: 52px;
+            font-size: 18px;
+            text-align: center;
+            background-color: white;
+            text-decoration: none;
+            margin-top: 100px;
+            line-height: 280%;
+        }
+        .contact2:hover{
+            background-color: rgb(209, 209, 209);
+        }
+        .contact3{
+            color: white;
+            font-size: 24px;
+            max-width: 800px;
+            font-weight: 350;
+            margin: 0;
+            align-content: center;
+        }
+
+
+        #final-section{
+            background-color: black;
+            padding: 50px 0 50px 0;
+        }
+        #footer{
+
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            margin: 10px 300px 10px 300px;
+            
+        }
+        .footer-item {
+            color: white;
+            
+        }
+        #final-section > #footer > .item1, .item2, .item3{
+            font-size: 12px;
+            color: #858585;
+            margin-top: 0;
+        }
+        #final-section > #footer > div > a{
+            text-decoration: none;
+            color: white;
+        }
+        #final-section > #footer > .item5, .item9, .item13{
+            font-size: 22px;
+        }
+        #final-section > #footer > .item8{
+            font-size: 14px;
+            color: #858585;
+        }
+    </style>
+</head>
+<body>
+    <div id="navigations">
+        <div>
+            <div class="nav-items">
+                <a href="">
+                    <img src="https://rocketman.learnwagtail.com/static/images/logo.24c25970fb09.png" alt="Home">
+                </a>
+            </div>
+            <div class="nav-items1">
+                <a href="#">
+                    SERVICES
+                </a>    
+            </div>
+            <div class="nav-items2">
+                <a href="#">
+                    CONTACT
+                </a>
+            </div>
+            <div class="nav-items3">
+                <a href="#">
+                    WAGTAIL COURSE
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <div id="cover-page">
+        <div id="box">
+            <div class="cover-content">
+                <h1>
+                    Supreme Rocket Maintenance
+                </h1>
+                <p>
+                    Your rocket is your $1,000,000,000 baby. We get that.
+                </p>
+                <a href="#">
+                    CONTACT US
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <h1 id="title">Your rocket is valuable. Let the professionals work on it.</h1>
+        <div id="grid-content">
+            <div class="content">
+                <a href="#">
+                    <img src="https://rocketman.learnwagtail.com/media/images/hello-i-m-nik-8yCmQODY2SY-unsplash.2e16d0ba.fill-570x370.jpg" alt="lego rocket">
+                </a>
+                <div class="content-box">
+                    <a href="#">
+                        It's not a toy
+                    </a>
+                    <a href="#">
+                        Or maybe you're Jeff Bezos .. and rockets are your toys!
+                    </a>
+                    <a href="#">
+                        VIEW SERVICES >
+                    </a>
+                </div>
+            </div>
+            <div class="content">
+                <a href="#">
+                    <img src="https://rocketman.learnwagtail.com/media/images/nasa-n463SoeSiVY-unsplash.2e16d0ba.fill-570x370.jpg" alt="rocket">
+                </a>
+                <div class="content-box">
+                    <a href="#">
+                        Rockets are cool!
+                    </a>
+                    <a href="#">
+                        Especially when you see photos like this one 🤤
+                    </a>
+                    <a href="#">
+                        CONTACT US >
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="grid-content-two">
+            <div class="pic-nav">
+                <img src="https://rocketman.learnwagtail.com/media/images/spacex-MEW1f-yu2KI-unsplash.2e16d0ba.fill-786x552.jpg" alt="">
+                
+                <div class="content-two">
+                    <h1>
+                        Self Landing Rocket
+                    </h1>
+                    <p>
+                        Probably the coolest thing ever!! We can program this for you.
+                    </p>
+                    <a href="#">
+                        MORE DETAILS
+                    </a>
+                </div>
+            </div>
+            <div class="pic-nav">
+                <img src="https://rocketman.learnwagtail.com/media/images/pablo-guerrero-pGXUwHZQ5eI-unsplas.2e16d0ba.fill-786x552.jpg" alt="">
+            
+                <div class="content-two">
+                    <h1>
+                        We'll clean your rocket
+                    </h1>
+                    <p>
+                        This image has nothing to do with cleaning. But it's kind of neat still.
+                    </p>
+                    <a href="#">
+                        MORE DETAILS
+                    </a>
+                </div>
+            </div>
+            <div class="pic-nav">
+                <img src="https://rocketman.learnwagtail.com/media/images/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-786x552.jpg" alt="">
+                
+                <div class="content-two">
+                    <h1>
+                        Rockets are gas guzzlers
+                    </h1>
+                    <p>
+                        If you think gas is expensive now.. think about rocket prices! Luckily, we water our gas down to give you more bang for your buck.
+                    </p>
+                    <a href="#">
+                        MORE DETAILS
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div id="final-content">
+            <p>
+                We've also partnered with Skynet to maintain humanoid robotics.
+            </p>
+            <div id="link-center">
+                <a href="#">
+                    CONTACT US
+                </a>
+            </div>
+            
+        </div>
+        <div id="final-word">
+            <p>
+                Our rockets were so clean they blinded over 1,000 people when they watched our launch. Thanks Rocketman!
+            </p>
+            <p>
+                — TOTALLY NOT SPACEX 😉
+            </p>
+        </div>
+    </div>
+    <div id="contact-section">
+        <div id="contact-grid">
+            <p class="contact1 border">
+                We’ll take good care of your rocket.
+            </p>
+            <a href="#" class="contact2 border">
+                CONTACT US
+            </a>
+            <p class="contact3 border">
+                We’ll treat your rocket as if it’s our own. Our standards are higher than the ISS's altitude. We also enjoy test driving your rocket before giving it back 😱
+            </p>
+            
+        </div>
+    </div>
+    <div id="final-section">
+        <div id="footer">
+            <div class="footer-item item1">
+                LINKS
+            </div>
+            <div class="footer-item item2">
+                    CONTACT US
+            </div>
+            <div class="footer-item item3">
+                    HOURS
+            </div>
+            <div class="footer-item item4">
+                <a href="#">
+                    <img src="https://rocketman.learnwagtail.com/static/images/twitter.547e4102088e.svg" alt="twitter">
+                </a>
+                <a href="#">
+                    <img src="https://rocketman.learnwagtail.com/static/images/youtube.4116506a463c.svg" alt="youtube">
+                </a>
+            </div>
+            <div class="footer-item item5">
+                <a href="#">
+                    Services
+                </a>
+            </div>
+            <div class="footer-item item6">
+                Contact us anytime at
+            </div>
+            <div class="footer-item item7">
+                Monday - Friday
+            </div>
+            <div class="footer-item item8">
+                © 2021 Rocketman
+            </div>
+            <div class="footer-item item9">
+                <a href="#">
+                    Contact
+                </a>
+            </div>
+            <div class="footer-item item10">
+                <a href="#">
+                    gary@totallyfakeemail.com
+                </a>
+            </div>
+            <div class="footer-item item11">
+                
+            </div>
+            <div class="footer-item item12">
+               
+            </div>
+            <div class="footer-item item13">
+                <a href="#">
+                    Wagtail Course
+                </a>
+            </div>
+            <div class="footer-item item14">
+                * All images from unsplash.com
+            </div>
+            <div class="footer-item item15">
+                
+            </div>
+            <div class="footer-item item16">
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
